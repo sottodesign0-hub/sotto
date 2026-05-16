@@ -112,6 +112,7 @@
       letter-spacing: .44em;
       color: var(--soft);
       line-height: 1;
+      white-space: nowrap;
     }
     .nav-right {
       display: flex;
@@ -414,7 +415,9 @@
       color: var(--white);
       background: var(--ink);
       text-decoration: none;
-      padding: 14px 40px;
+      padding: 15px 0;
+      width: 200px;
+      text-align: center;
       transition: background .4s;
     }
     .hero-btn:hover { background: #444; }
@@ -426,7 +429,9 @@
       background: transparent;
       text-decoration: none;
       border: 1px solid var(--ink);
-      padding: 16px 32px;
+      padding: 14px 0;
+      width: 200px;
+      text-align: center;
       transition: background .35s, color .35s;
     }
     .hero-btn-ghost:hover { background: var(--ink); color: var(--white); }
@@ -815,6 +820,21 @@
     .design-grid-interior { grid-template-columns: repeat(3, 1fr); }
     .design-grid-interior .design-img { aspect-ratio: 4/3; background: #111; }
     .design-grid-interior .design-img img { object-fit: cover; opacity: .92; }
+    .design-project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: .36em;
+      color: var(--soft);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+      transition: color .3s, border-color .3s;
+    }
+    .design-project-link:hover { color: var(--ink); border-color: var(--ink); }
     .design-grid-logos-wrap {
       position: relative;
     }
@@ -1046,6 +1066,44 @@
       aspect-ratio: 3/4;
       object-fit: cover;
       object-position: center top;
+      display: block;
+    }
+    /* 写真ラッパー＋キャプションオーバーレイ */
+    .story-photo-wrap {
+      position: relative;
+      width: 100%;
+    }
+    .story-photo-wrap img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .story-photo-caption {
+      display: none; /* デスクトップでは非表示 */
+    }
+    .story-photo-role {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 8px;
+      letter-spacing: .44em;
+      color: rgba(255,255,255,.6);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .story-photo-name-en {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: .22em;
+      color: rgba(255,255,255,.9);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .story-photo-name-ja {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 11px;
+      letter-spacing: .18em;
+      color: rgba(255,255,255,.7);
       display: block;
     }
     .story-right { padding-top: 8px; }
@@ -1608,29 +1666,99 @@
       .service-inner { grid-template-columns: 1fr; gap:32px; }
       .service-item { grid-template-columns: 40px 1fr; }
       .service-item-desc { grid-column: 2; }
-      .story-inner { grid-template-columns: 1fr; gap:56px; }
+      /* story: モバイルで左写真・右テキストの2カラム */
+      #story { padding: 60px 0 80px; }
+      #story > div:first-child { padding: 0 20px; margin-bottom: 24px; }
+      #story > div:first-child .concept-num { font-size: 48px; margin-bottom: 8px; }
+      #story > div:first-child .concept-label { font-size: 12px; }
+      .story-inner { grid-template-columns: 5fr 7fr; gap: 16px; padding: 0 20px; }
+      .story-left { position: static; }
+      /* 2枚目の写真は非表示 */
+      .story-photo-second { display: none; }
+      .story-photos { gap: 0; }
+      .story-photo-wrap img { aspect-ratio: 3/4; }
+      /* 右側：ロゴ非表示、コンパクトに */
+      .story-logo { display: none; }
+      .story-name { font-size: 17px; margin-bottom: 4px; }
+      .story-name-en { font-size: 9px; margin-bottom: 14px; }
+      .story-tags { margin-bottom: 12px; }
+      .story-tag { font-size: 8px; padding: 4px 8px; }
+      .story-text { font-size: 11px; line-height: 1.8; }
       #concept { grid-template-columns: 1fr; gap:24px; padding:100px 32px; }
       .concept-num { font-size:52px; }
+      /* nav タグラインを早めに非表示 */
+      .nav-tagline { display: none; }
+      /* issue: 2カラムに */
+      .issue-grid { grid-template-columns: repeat(2, 1fr); padding: 0 24px; }
+      /* office: 縦積みに */
+      .office-inner { grid-template-columns: 1fr; gap: 32px; }
+      .office-map { height: 280px; min-height: 280px; }
     }
     @media (max-width: 768px) {
-      .topbar { padding:8px 24px; }
-      .topbar-right { gap:16px; }
-      nav { padding:0 24px; }
-      .nav-links { display:none; }
-      .works-grid { grid-template-columns: 1fr; padding:0 24px; }
-      .works-header { padding:0 24px; }
-      .design-header { padding:0 24px; }
-      .design-categories { padding:0 24px; }
-      .design-grid-kanban { grid-template-columns: repeat(2,1fr); }
-      .design-grid-meisi { grid-template-columns: repeat(2,1fr); }
-      .service-inner { padding:0 24px; }
-      .story-inner { padding:0 24px; }
-      #cta { padding:120px 24px; }
-      footer { padding:48px 24px 32px; }
-      .footer-top { flex-direction:column; gap:32px; }
-      .footer-info { align-items:flex-start; }
-      .footer-bottom { flex-direction:column; gap:16px; text-align:center; }
-      .footer-links { flex-wrap:wrap; justify-content:center; }
+      /* topbar: モバイルで非表示 */
+      .topbar { display: none; }
+      /* nav: topbar非表示の分、top:0に */
+      nav { top: 0; padding: 0 20px; height: 64px; }
+      nav.scrolled { top: 0; }
+      /* hero: topbar分のpadding調整 */
+      #hero { padding-top: 64px; }
+      .nav-links { display: none; }
+      .nav-logo-img { height: 40px; }
+      /* hero buttons: 折り返し防止 */
+      .hero-btn, .hero-btn-ghost { white-space: nowrap; }
+      .hero-actions { gap: 16px; }
+      .works-grid { grid-template-columns: 1fr; padding: 0 20px; }
+      /* worksの並び順：Tsumuie → THE HOSPITEL → すずらんテラス */
+      .works-grid .work-card:nth-child(1) { order: 2; }
+      .works-grid .work-card:nth-child(2) { order: 1; }
+      .works-grid .work-card:nth-child(3) { order: 3; }
+      .works-header { padding: 0 20px; }
+      .design-header { padding: 0 20px; }
+      .design-categories { padding: 0 20px; }
+      .design-grid-kanban { grid-template-columns: repeat(2, 1fr); }
+      .design-grid-meisi { grid-template-columns: repeat(2, 1fr); }
+      /* グラフィックデザイン：モバイルで4枚横並び表示 */
+      .design-grid-logos .design-img {
+        flex: 0 0 calc(25vw - 18px);
+        aspect-ratio: 1 / 1 !important;
+      }
+      .service-inner { padding: 0 20px; }
+      /* story-innerはpadding不要（900pxで設定済み） */
+      /* issue: 1カラムに＋センタリング */
+      .issue-grid { grid-template-columns: 1fr; padding: 0 20px; gap: 2px; }
+      .issue-card { padding: 32px 24px; text-align: center; }
+      .issue-icon { margin-left: auto; margin-right: auto; }
+      .issue-num { text-align: center; }
+      .issue-text { text-align: center; }
+      .issue-sub { text-align: center; }
+      #cta { padding: 100px 20px; }
+      /* footer: 1カラムに */
+      footer { padding: 48px 20px 32px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+      /* concept section */
+      #concept { grid-template-columns: 1fr; gap: 24px; padding: 80px 20px; }
+      .concept-num { font-size: 52px; }
+    }
+    /* フッター：モバイルのみCTAの直後に表示 */
+    .footer-mobile-only {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .footer-mobile-only {
+        display: block;
+        background: var(--dark);
+        padding: 48px 24px 40px;
+      }
+      /* モバイルでは本来のフッターの左カラム（住所情報）を非表示 */
+      .footer-brand-block { display: none; }
+    }
+    @media (max-width: 480px) {
+      .story-inner { grid-template-columns: 4fr 6fr; gap: 14px; }
+      .story-name { font-size: 15px; }
+      .story-text { font-size: 10px; }
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
     }
   </style>
 </head>
@@ -1659,7 +1787,7 @@
       <a href="#service" class="nav-link">Service</a>
       <a href="#story"   class="nav-link">Story</a>
     </div>
-    <a href="#cta" class="nav-contact-btn">Contact</a>
+    <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="nav-contact-btn">Contact</a>
     <button class="hamburger-btn" id="hamburgerBtn" aria-label="メニューを開く">
       <span></span><span></span><span></span>
     </button>
@@ -1679,7 +1807,7 @@
     <a href="#service" class="nav-overlay-link" onclick="closeMenu()">Service</a>
     <a href="#story"   class="nav-overlay-link" onclick="closeMenu()">Story</a>
   </div>
-  <a href="#cta" class="nav-overlay-contact" onclick="closeMenu()">CONTACT</a>
+  <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="nav-overlay-contact" onclick="closeMenu()">CONTACT</a>
   <div class="nav-overlay-info">
     <p>(078) 600 0548</p>
     <p>sottodesign0@gmail.com</p>
@@ -1700,7 +1828,7 @@
     </p>
     <div class="hero-actions reveal d3">
       <a href="#works"  class="hero-btn">WORKS</a>
-      <a href="#cta"    class="hero-btn-ghost">お問い合わせ</a>
+      <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="hero-btn-ghost">お問い合わせ</a>
     </div>
   </div>
 </section>
@@ -1784,7 +1912,7 @@
         <svg viewBox="0 0 56 56"><circle cx="16" cy="14" r="7"/><path d="M2,44 C2,34 30,34 30,44"/><polyline points="30,34 42,24 54,34"/><path d="M34,34 L34,50 L50,50 L50,34"/><line x1="40" y1="50" x2="40" y2="42"/><line x1="44" y1="50" x2="44" y2="42"/></svg>
       </span>
       <span class="issue-num">04</span>
-      <p class="issue-text">フリーランスで、<br>安定した住まいを確保したい</p>
+      <p class="issue-text">自営業・フリーランスで<br>安定した住まいを確保したい</p>
       <p class="issue-sub">家賃を積み立てて持ち家へ。Tsumuieで新しい住まいの選択肢を。</p>
     </div>
 
@@ -1913,6 +2041,9 @@
         <div class="design-img"><img src="./images/hospitel/Z9S_4060.jpg" alt="THE HOSPITEL 5"></div>
         <div class="design-img"><img src="./images/hospitel/Z9S_4164.jpg" alt="THE HOSPITEL 6"></div>
       </div>
+      <a href="https://orthomelia-web.github.io/the-hospitel/" target="_blank" rel="noopener" class="design-project-link">
+        <span>→ THE HOSPITEL</span>
+      </a>
     </div>
 
   </div>
@@ -1962,8 +2093,10 @@
   <div class="story-inner">
     <div class="story-left reveal">
       <div class="story-photos">
-        <img src="./images/photos/2.png" alt="増田早紀">
-        <img src="./images/photos/1.JPG" alt="増田早紀 現場">
+        <div class="story-photo-wrap">
+          <img src="./images/photos/2.png" alt="増田早紀">
+        </div>
+        <img src="./images/photos/1.JPG" alt="増田早紀 現場" class="story-photo-second">
       </div>
     </div>
     <div class="story-right">
@@ -1977,12 +2110,10 @@
         <span class="story-tag">LED関西2025ファイナリスト</span>
       </div>
       <p class="story-text reveal d2">
-        株式会社SOTTO代表取締役。<br>
-        元行政の建築職として公共施設の設計・工事監理や建築許認可、不動産相談に携わった後、独立。建築と不動産の視点から空き家活用をプロデュースし、建築デザインや不動産伴走支援を行っています。<br><br>
-        2026年夏、神戸市北区鈴蘭台で<br>
-        地域交流型アトリエ／すずらんテラスSOTTOをスタート予定。<br>
-        自営業・フリーランスの方が安心して挑戦できる住まいを実現するため、<br>
-        家賃を積み立てて持ち家へとなる「Tsumuie」を展開していきます。
+        株式会社SOTTO代表取締役。元行政の建築職として公共施設の設計・工事監理や建築許認可、不動産相談に携わった後、独立。建築と不動産の視点から空き家活用をプロデュースし、建築デザインや不動産伴走支援を行っています。
+      </p>
+      <p class="story-text reveal d2" style="margin-top:1.4em;">
+        2026年夏、神戸市北区鈴蘭台に地域交流型アトリエ「すずらんテラスSOTTO」をスタート予定。自営業・フリーランスの方が安心して挑戦できる住まいを実現するため、家賃を積み立てて持ち家へとなる「Tsumuie」を展開していきます。
       </p>
     </div>
   </div>
@@ -2008,15 +2139,16 @@
         <a href="tel:0786000548" class="cta-contact-val">(078) 600 0548</a>
       </div>
       <div class="cta-contact-item">
-        <span class="cta-contact-label">EMAIL</span>
-        <a href="mailto:sottodesign0@gmail.com" class="cta-contact-val">sottodesign0@gmail.com</a>
+        <span class="cta-contact-label">LINE</span>
+        <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="cta-contact-val">公式LINEでお問い合わせ</a>
       </div>
     </div>
-    <a href="mailto:sottodesign0@gmail.com" class="cta-btn reveal d3">CONTACT</a>
+    <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="cta-btn reveal d3">LINE で相談する</a>
   </div>
 </section>
 
 
+<!-- フッター情報：モバイルのみCTAの直後に表示 -->
 <!-- ⑦-b GRAPHIC DESIGN -->
 <section style="background: var(--white); padding: 80px 0 100px;">
   <div class="design-categories design-light">
@@ -2156,7 +2288,7 @@
     <div>
       <span class="footer-col-label">Contact</span>
       <div class="footer-contact-btns">
-        <a href="mailto:sottodesign0@gmail.com" class="footer-contact-btn">メールでお問い合わせ</a>
+        <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="footer-contact-btn">LINE でお問い合わせ</a>
         <a href="https://note.com/sotto_design" target="_blank" rel="noopener" class="footer-contact-btn">Blog</a>
         <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-contact-btn">Instagram</a>
       </div>
@@ -2173,8 +2305,23 @@
 </footer>
 
 
+<!-- フッター情報：モバイルのみページ最後に表示 -->
+<div class="footer-mobile-only">
+  <img src="./images/logo/IMG_6491.PNG" alt="SOTTO" class="footer-logo-img">
+  <span class="footer-tagline">空家活用プロデュース</span>
+  <div class="footer-address-block">
+    <span class="footer-info-item">〒651-1112</span>
+    <span class="footer-info-item">神戸市北区鈴蘭台東町２丁目６−１４</span>
+    <span class="footer-info-item">神戸電鉄 鈴蘭台駅 徒歩約5分</span>
+    <span class="footer-info-item">(078) 600 0548</span>
+    <span class="footer-info-item">sottodesign0@gmail.com</span>
+  </div>
+  <span class="footer-company">株式会社SOTTO</span>
+  <p class="footer-copy" style="margin-top:24px;">© 2025 SOTTO Co., Ltd.</p>
+</div>
+
 <!-- フローティング お問い合わせボタン -->
-<a href="#cta" class="float-contact" id="floatContact" aria-label="お問い合わせ">
+<a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="float-contact" id="floatContact" aria-label="LINEでお問い合わせ">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M21 8V16C21 17.1046 20.1046 18 19 18H5C3.89543 18 3 17.1046 3 16V8M21 8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8M21 8L12 13L3 8"/>
   </svg>
@@ -2229,7 +2376,7 @@
     const arrowR   = document.getElementById('arrowRight');
     if (!scroll || !wrap || !arrowL || !arrowR) return;
 
-    const STEP = 480; // px per click
+    const STEP = window.innerWidth <= 768 ? scroll.clientWidth : 480; // モバイルは画面幅分ずつ
 
     function updateArrows() {
       const atLeft  = scroll.scrollLeft <= 4;
