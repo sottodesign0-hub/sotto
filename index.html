@@ -2606,6 +2606,13 @@
     <ul class="news-list reveal d1">
 
       <li class="news-item">
+        <span class="news-date">2026.08.28</span>
+        <span class="news-tag">レポート</span>
+        <p class="news-title">地域交流型アトリエ「すずらんテラス SOTTO」オープニングイベントを開催しました</p>
+        <a href="https://note.com/sotto_design/n/nae95e0489df5" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
+      </li>
+
+      <li class="news-item">
         <span class="news-date">2026.08.13</span>
         <span class="news-tag">登壇</span>
         <p class="news-title">住みながら育てる家“Tsumuie”が挑む、新しい暮らしの仕組み ナレッジ木曜サロン（グランフロント大阪 ナレッジキャピタル）に登壇</p>
@@ -2842,6 +2849,168 @@
       </div>
     </div>
     <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="cta-btn reveal d3">LINE で相談する</a>
+
+    <!-- ─── お問い合わせフォーム ─── -->
+    <style>
+      .scf-or {
+        display:flex; align-items:center; gap:16px;
+        max-width:520px; margin:64px auto 40px;
+        color:rgba(255,255,255,.3); font-size:10px; letter-spacing:.4em;
+      }
+      .scf-or::before, .scf-or::after { content:''; flex:1; height:1px; background:rgba(255,255,255,.14); }
+      .scf-form { max-width:520px; margin:0 auto; text-align:left; }
+      .scf-row2 { display:flex; gap:20px; }
+      .scf-row2 > .scf-field { flex:1; }
+      @media (max-width:560px){ .scf-row2 { flex-direction:column; gap:0; } }
+      .scf-field { margin-bottom:24px; }
+      .scf-field label {
+        display:block; font-size:9px; letter-spacing:.32em;
+        color:rgba(255,255,255,.4); margin-bottom:10px; text-transform:uppercase;
+      }
+      .scf-field .scf-req { color:rgba(230,160,120,.85); margin-left:8px; letter-spacing:.1em; }
+      .scf-field .scf-opt { color:rgba(255,255,255,.28); margin-left:8px; letter-spacing:.1em; }
+      .scf-form input, .scf-form select, .scf-form textarea {
+        width:100%; background:transparent; color:rgba(255,255,255,.92);
+        border:none; border-bottom:1px solid rgba(255,255,255,.22);
+        padding:10px 2px; font-size:14px; letter-spacing:.06em;
+        font-family:inherit; transition:border-color .3s; appearance:none; border-radius:0;
+      }
+      .scf-form textarea { resize:vertical; min-height:96px; line-height:1.9; }
+      .scf-form select { cursor:pointer;
+        background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' fill-opacity='0.4' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+        background-repeat:no-repeat; background-position:right 4px center; padding-right:24px;
+      }
+      .scf-form select option { color:#1a1710; }
+      .scf-form input:focus, .scf-form select:focus, .scf-form textarea:focus {
+        outline:none; border-bottom-color:rgba(255,255,255,.7);
+      }
+      .scf-form input::placeholder, .scf-form textarea::placeholder { color:rgba(255,255,255,.25); }
+      .scf-hint { font-size:11px; letter-spacing:.05em; color:rgba(255,255,255,.32); margin-top:8px; }
+      .scf-consent {
+        display:flex; align-items:flex-start; gap:12px; cursor:pointer;
+        font-size:12px; line-height:1.9; color:rgba(255,255,255,.55); letter-spacing:.04em;
+        margin:8px 0 32px;
+      }
+      .scf-consent input {
+        appearance:none; -webkit-appearance:none; width:20px; height:20px; flex-shrink:0; margin:2px 0 0;
+        border:1px solid rgba(255,255,255,.3); border-radius:4px; background:transparent;
+        cursor:pointer; position:relative; transition:background .15s, border-color .15s;
+      }
+      .scf-consent input:checked { background:rgba(255,255,255,.9); border-color:rgba(255,255,255,.9); }
+      .scf-consent input:checked::after {
+        content:''; position:absolute; left:6px; top:2px; width:5px; height:10px;
+        border:solid #1a1710; border-width:0 2px 2px 0; transform:rotate(45deg);
+      }
+      .scf-consent .scf-req { color:rgba(230,160,120,.85); }
+      .scf-submit {
+        display:block; width:100%; max-width:520px; margin:0 auto;
+        background:rgba(255,255,255,.92); color:var(--dark);
+        border:none; padding:16px; font-size:10px; letter-spacing:.44em;
+        font-family:inherit; text-transform:uppercase; cursor:pointer; transition:background .3s;
+      }
+      .scf-submit:hover { background:#fff; }
+      .scf-submit:disabled { opacity:.5; cursor:default; }
+      .scf-note { text-align:center; font-size:11px; letter-spacing:.05em; color:rgba(255,255,255,.32); margin-top:18px; }
+      .scf-hp { position:absolute; left:-9999px; }
+      .scf-err {
+        display:none; max-width:520px; margin:16px auto 0; text-align:center;
+        font-size:12px; letter-spacing:.04em; color:rgba(235,150,120,.95);
+        border:1px solid rgba(235,150,120,.35); padding:14px; border-radius:6px;
+      }
+      .scf-success { display:none; max-width:520px; margin:0 auto; text-align:center; }
+      .scf-success .scf-chk {
+        width:56px; height:56px; border-radius:50%; border:1px solid rgba(255,255,255,.4);
+        color:rgba(255,255,255,.9); font-size:24px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:24px;
+      }
+      .scf-success h3 { font-size:18px; font-weight:200; letter-spacing:.14em; color:rgba(255,255,255,.9); margin-bottom:16px; }
+      .scf-success p { font-size:13px; letter-spacing:.05em; color:rgba(255,255,255,.5); line-height:2; }
+    </style>
+
+    <div class="scf-or reveal">OR フォームから送る</div>
+
+    <form id="scfForm" class="scf-form reveal" action="https://formspree.io/f/xbgjgdve" method="POST">
+      <input type="hidden" name="_subject" value="【SOTTO】ホームページからお問い合わせがありました">
+      <input type="text" name="_gotcha" class="scf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="scf-field">
+        <label>お名前<span class="scf-req">必須</span></label>
+        <input type="text" name="お名前" required autocomplete="name">
+      </div>
+
+      <div class="scf-row2">
+        <div class="scf-field">
+          <label>メールアドレス<span class="scf-req">必須</span></label>
+          <input type="email" name="メールアドレス" required autocomplete="email">
+        </div>
+        <div class="scf-field">
+          <label>電話番号<span class="scf-opt">任意</span></label>
+          <input type="tel" name="電話番号" autocomplete="tel" inputmode="tel">
+        </div>
+      </div>
+
+      <div class="scf-field">
+        <label>ご希望の返信方法<span class="scf-opt">任意</span></label>
+        <select name="希望の返信方法">
+          <option value="">選択してください</option>
+          <option>メール</option>
+          <option>電話</option>
+          <option>LINE</option>
+          <option>どれでも可</option>
+        </select>
+        <p class="scf-hint">「電話」「LINE」をご希望の場合は、電話番号のご記入をおすすめします。</p>
+      </div>
+
+      <div class="scf-field">
+        <label>お問い合わせ内容<span class="scf-req">必須</span></label>
+        <textarea name="お問い合わせ内容" required placeholder="ご相談・ご質問の内容を自由にご記入ください。"></textarea>
+      </div>
+
+      <label class="scf-consent">
+        <input type="checkbox" name="個人情報の取扱いに同意" value="同意する" required>
+        <span>ご入力いただいた個人情報は、お問い合わせへのご対応・ご連絡のみに使用し、ご本人の同意なく第三者へ提供することはありません。上記に同意します。<span class="scf-req">必須</span></span>
+      </label>
+
+      <button type="submit" class="scf-submit" id="scfSubmit">この内容で送信する</button>
+      <p class="scf-note">送信後、担当より数日以内にご連絡いたします。</p>
+      <div class="scf-err" id="scfErr">送信に失敗しました。お手数ですが時間をおいて再度お試しいただくか、公式LINE・メールからご連絡ください。</div>
+    </form>
+
+    <div class="scf-success" id="scfSuccess">
+      <div class="scf-chk">✓</div>
+      <h3>お問い合わせありがとうございます</h3>
+      <p>内容を受け付けました。<br>担当より数日以内にご連絡いたします。<br>お急ぎの場合は公式LINE・お電話でもご連絡いただけます。</p>
+    </div>
+
+    <script>
+      (function(){
+        var form = document.getElementById('scfForm');
+        var btn = document.getElementById('scfSubmit');
+        var err = document.getElementById('scfErr');
+        var ok  = document.getElementById('scfSuccess');
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          err.style.display = 'none';
+          if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
+            err.textContent = '【設定未完了】Formspree の form ID が未設定です。ページ管理者にお知らせください。';
+            err.style.display = 'block';
+            return;
+          }
+          btn.disabled = true;
+          btn.textContent = '送信中…';
+          fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} })
+            .then(function(res){
+              if (res.ok) { form.style.display='none'; ok.style.display='block'; }
+              else { throw new Error('bad status'); }
+            })
+            .catch(function(){
+              err.textContent = '送信に失敗しました。お手数ですが時間をおいて再度お試しいただくか、公式LINE・メールからご連絡ください。';
+              err.style.display = 'block';
+              btn.disabled = false;
+              btn.textContent = 'この内容で送信する';
+            });
+        });
+      })();
+    </script>
   </div>
 </section>
 
