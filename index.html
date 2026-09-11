@@ -64,7 +64,7 @@
     "areaServed": { "@type": "Place", "name": "神戸市・兵庫県" },
     "sameAs": [
       "https://note.com/sotto_design",
-      "https://lin.ee/Vz8t9Z9"
+      "https://lin.ee/TV7vuSq"
     ]
   },
   {
@@ -87,7 +87,7 @@
     "knowsAbout": ["空き家活用", "空家活用", "建築デザイン", "不動産", "民泊", "リノベーション"],
     "sameAs": [
       "https://note.com/sotto_design",
-      "https://lin.ee/Vz8t9Z9"
+      "https://lin.ee/TV7vuSq"
     ]
   }
   ]
@@ -2322,6 +2322,99 @@
       .event-header { flex-direction: column; align-items: flex-start; gap: 20px; }
       .event-grid { grid-template-columns: 1fr; }
     }
+
+    /* ===== MEDIA / 掲載メディア ===== */
+    #media {
+      background: var(--off);
+      padding: 100px 0 120px;
+    }
+    .media-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 64px;
+    }
+    .media-inner .concept-index { margin-bottom: 48px; }
+    .media-feature {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) 1fr;
+      gap: 44px;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 32px;
+      transition: box-shadow .3s ease, transform .3s ease;
+    }
+    .media-feature:hover {
+      box-shadow: 0 18px 44px rgba(26, 23, 16, .10);
+      transform: translateY(-3px);
+    }
+    .media-feature-img {
+      overflow: hidden;
+      background: var(--off);
+      border: 1px solid var(--line);
+    }
+    .media-feature-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform .6s ease;
+    }
+    .media-feature:hover .media-feature-img img { transform: scale(1.02); }
+    .media-source {
+      grid-column: 1 / -1;
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 600;
+      font-size: clamp(16px, 1.8vw, 21px);
+      letter-spacing: .05em;
+      line-height: 1.6;
+      color: var(--ink);
+      margin-bottom: 4px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .media-headline {
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 500;
+      font-size: clamp(15px, 1.7vw, 19px);
+      letter-spacing: .04em;
+      line-height: 1.5;
+      color: var(--mid);
+      margin-bottom: 10px;
+    }
+    .media-subhead {
+      font-size: 12.5px;
+      font-weight: 400;
+      line-height: 1.9;
+      color: var(--soft);
+      margin-bottom: 26px;
+    }
+    .media-more {
+      display: inline-block;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: .3em;
+      color: var(--mid);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 3px;
+      transition: color .2s, border-color .2s;
+    }
+    .media-feature:hover .media-more { color: var(--ink); border-color: var(--ink); }
+    .media-note {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 10.5px;
+      font-weight: 300;
+      line-height: 1.75;
+      letter-spacing: .02em;
+      color: var(--soft);
+    }
+    @media (max-width: 768px) {
+      .media-inner { padding: 0 24px; }
+      .media-feature { grid-template-columns: 1fr; gap: 24px; padding: 20px; }
+    }
   </style>
 </head>
 <body>
@@ -2348,7 +2441,7 @@
       <a href="#service" class="nav-link">Service</a>
       <a href="#story"   class="nav-link">Story</a>
     </div>
-    <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="nav-contact-btn">Contact</a>
+    <a href="https://lin.ee/TV7vuSq" target="_blank" rel="noopener" class="nav-contact-btn">Contact</a>
     <button class="hamburger-btn" id="hamburgerBtn" aria-label="メニューを開く">
       <span></span><span></span><span></span>
     </button>
@@ -2368,7 +2461,7 @@
     <a href="#service" class="nav-overlay-link" onclick="closeMenu()">Service</a>
     <a href="#story"   class="nav-overlay-link" onclick="closeMenu()">Story</a>
   </div>
-  <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="nav-overlay-contact" onclick="closeMenu()">CONTACT</a>
+  <a href="https://lin.ee/TV7vuSq" target="_blank" rel="noopener" class="nav-overlay-contact" onclick="closeMenu()">CONTACT</a>
   <div class="nav-overlay-info">
     <p>sottodesign0@gmail.com</p>
     <p>神戸市北区鈴蘭台東町２丁目６−１４</p>
@@ -2387,7 +2480,7 @@
       建築×不動産で空家活用をプロデュース。
     </p>
     <div class="hero-actions reveal d3">
-      <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="hero-btn-ghost">お問い合わせ</a>
+      <a href="https://lin.ee/TV7vuSq" target="_blank" rel="noopener" class="hero-btn-ghost">お問い合わせ</a>
     </div>
   </div>
 </section>
@@ -2588,6 +2681,30 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- ③-2 MEDIA / 掲載メディア -->
+<section id="media">
+  <div class="media-inner">
+    <div class="concept-index reveal">
+      <span class="concept-num">MEDIA</span>
+      <span class="concept-label">掲載メディア</span>
+    </div>
+
+    <a class="media-feature reveal d1" href="./media/kobe-shimbun-20260911.html">
+      <div class="media-source">神戸新聞　2026.09.11　朝刊17面「わがまち神戸」掲載</div>
+      <div class="media-feature-img">
+        <img src="./images/media/kobe-shimbun-20260911.jpg"
+             alt="神戸新聞 2026年9月11日 朝刊「わがまち神戸」掲載記事「女性専用の貸しオフィス」">
+      </div>
+      <div class="media-feature-body">
+        <h3 class="media-headline">女性専用の貸しオフィス</h3>
+        <p class="media-subhead">1級建築士の女性開設「起業家らの交流拠点に」<br>鈴蘭台の店舗兼住宅改修</p>
+        <span class="media-more">記事を読む →</span>
+        <p class="media-note">本記事は、神戸新聞社の許諾（著作物利用許諾書）を得て転載しています。無断での複製・転載・二次利用はご遠慮ください。<br>掲載媒体：神戸新聞　2026年9月11日　朝刊17面「わがまち神戸」</p>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -2852,10 +2969,10 @@
       </div>
       <div class="cta-contact-item">
         <span class="cta-contact-label">LINE</span>
-        <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="cta-contact-val">公式LINEでお問い合わせ</a>
+        <a href="https://lin.ee/TV7vuSq" target="_blank" rel="noopener" class="cta-contact-val">公式LINEでお問い合わせ</a>
       </div>
     </div>
-    <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="cta-btn reveal d3">LINE で相談する</a>
+    <a href="https://lin.ee/TV7vuSq" target="_blank" rel="noopener" class="cta-btn reveal d3">LINE で相談する</a>
 
     <!-- ─── お問い合わせフォーム ─── -->
     <style>
@@ -3294,6 +3411,7 @@
         <a href="#design"  class="footer-menu-link">Design</a>
         <a href="#service" class="footer-menu-link">Service</a>
         <a href="#story"   class="footer-menu-link">Story</a>
+        <a href="#media"   class="footer-menu-link">メディア掲載</a>
         <a href="#office"  class="footer-menu-link">アクセス</a>
       </div>
     </div>
@@ -3302,7 +3420,7 @@
     <div>
       <span class="footer-col-label">Contact</span>
       <div class="footer-contact-btns">
-        <a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="footer-contact-btn">LINE でお問い合わせ</a>
+        <a href="https://lin.ee/TV7vuSq" target="_blank" rel="noopener" class="footer-contact-btn">LINE でお問い合わせ</a>
         <a href="https://note.com/sotto_design" target="_blank" rel="noopener" class="footer-contact-btn">Blog</a>
         <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-contact-btn">Instagram</a>
       </div>
@@ -3339,7 +3457,7 @@
 </div>
 
 <!-- フローティング お問い合わせボタン -->
-<a href="https://lin.ee/Vz8t9Z9" target="_blank" rel="noopener" class="float-contact" id="floatContact" aria-label="LINEでお問い合わせ">
+<a href="https://lin.ee/TV7vuSq" target="_blank" rel="noopener" class="float-contact" id="floatContact" aria-label="LINEでお問い合わせ">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M21 8V16C21 17.1046 20.1046 18 19 18H5C3.89543 18 3 17.1046 3 16V8M21 8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8M21 8L12 13L3 8"/>
   </svg>
