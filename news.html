@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NEWS / お知らせ・活動一覧｜株式会社SOTTO（空き家活用プロデュース・神戸）</title>
+  <meta name="description" content="株式会社SOTTO（代表：増田早紀）のお知らせ・イベント・登壇・出展・メディア掲載・受賞などの活動一覧。神戸を拠点とするSOTTOの最新情報を時系列でご覧いただけます。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sottodesign0-hub.github.io/sotto/news.html">
+
+  <link rel="icon" type="image/png" href="./images/logo/sottologo.png">
+  <link rel="apple-touch-icon" href="./images/logo/sottologo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NEWS / お知らせ・活動一覧｜株式会社SOTTO">
+  <meta property="og:description" content="SOTTOのイベント・登壇・出展・メディア掲載・受賞などの活動一覧を時系列でご覧いただけます。">
+  <meta property="og:url" content="https://sottodesign0-hub.github.io/sotto/news.html">
+  <meta property="og:site_name" content="株式会社SOTTO｜空き家活用プロデュース">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://sottodesign0-hub.github.io/sotto/images/logo/sottocover.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Josefin+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --white: #f0ebe1;
+      --off:   #e6dfd4;
+      --dark:  #1a1710;
+      --ink:   #1e1b13;
+      --mid:   #6b6457;
+      --soft:  #a89e92;
+      --line:  #d4cdc2;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 300;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── NAV ─────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(240,235,225,.86);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-logo-img { height: 46px; width: auto; display: block; }
+    .nav-back {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: .28em;
+      color: var(--mid);
+      border: 1px solid var(--line);
+      padding: 9px 20px;
+      transition: color .2s, border-color .2s, background .2s;
+    }
+    .nav-back:hover { color: var(--ink); border-color: var(--ink); background: var(--off); }
+
+    /* ─── PAGE HEADER ─────────────────────────── */
+    .page-header {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 80px 40px 40px;
+    }
+    .page-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: .4em;
+      color: var(--soft);
+      display: block;
+      margin-bottom: 18px;
+    }
+    .page-title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 200;
+      letter-spacing: .16em;
+      line-height: 1;
+      color: var(--ink);
+    }
+    .page-lead {
+      margin-top: 26px;
+      font-size: 14px;
+      letter-spacing: .05em;
+      color: var(--mid);
+      max-width: 640px;
+      line-height: 2;
+    }
+
+    /* ─── LIST ─────────────────────────── */
+    .archive {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 44px 40px 120px;
+    }
+    .news-list { list-style: none; border-top: 1px solid var(--line); }
+    .news-item {
+      display: grid;
+      grid-template-columns: 116px 92px 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+      transition: background .2s, padding .2s, margin .2s;
+    }
+    .news-item:hover { background: var(--off); margin: 0 -20px; padding: 24px 20px; }
+    .news-date {
+      font-family: 'EB Garamond', serif;
+      font-size: 14px;
+      letter-spacing: .1em;
+      color: var(--soft);
+      white-space: nowrap;
+    }
+    .news-tag {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 8px;
+      letter-spacing: .22em;
+      color: var(--mid);
+      border: 1px solid var(--line);
+      padding: 4px 10px;
+      white-space: nowrap;
+      text-align: center;
+      width: fit-content;
+    }
+    .news-title {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: .04em;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+    .news-link {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 8px;
+      letter-spacing: .28em;
+      color: var(--mid);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 3px;
+      white-space: nowrap;
+      transition: color .2s, border-color .2s;
+    }
+    .news-item:hover .news-link { color: var(--ink); border-color: var(--ink); }
+
+    /* ─── FOOTER ─────────────────────────── */
+    .foot {
+      background: var(--dark);
+      color: rgba(255,255,255,.7);
+      padding: 60px 40px 48px;
+      text-align: center;
+    }
+    .foot-logo { height: 48px; margin-bottom: 16px; filter: brightness(0) invert(1); opacity: .9; }
+    .foot-company { display: block; font-size: 13px; letter-spacing: .1em; margin-bottom: 6px; color: rgba(255,255,255,.85); }
+    .foot-tag { display: block; font-size: 11px; letter-spacing: .18em; color: rgba(255,255,255,.45); margin-bottom: 28px; }
+    .foot-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 28px; margin-bottom: 30px; }
+    .foot-menu a {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: .2em;
+      color: rgba(255,255,255,.6);
+      transition: color .2s;
+    }
+    .foot-menu a:hover { color: #fff; }
+    .foot-copy { font-family: 'EB Garamond', serif; font-size: 12px; letter-spacing: .12em; color: rgba(255,255,255,.4); }
+
+    @media (max-width: 768px) {
+      .nav { padding: 16px 20px; }
+      .nav-logo-img { height: 40px; }
+      .page-header { padding: 56px 22px 28px; }
+      .archive { padding: 32px 22px 90px; }
+      .news-item {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 8px 14px;
+        row-gap: 10px;
+      }
+      .news-date  { grid-column: 1; grid-row: 1; }
+      .news-tag   { grid-column: 2; grid-row: 1; justify-self: start; }
+      .news-title { grid-column: 1 / -1; grid-row: 2; }
+      .news-link  { grid-column: 1 / -1; grid-row: 3; justify-self: start; margin-top: 4px; }
+      .news-item:hover { margin: 0 -14px; padding: 24px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="./index.html" aria-label="SOTTO ホーム"><img src="./images/logo/IMG_6491.PNG" alt="SOTTO" class="nav-logo-img"></a>
+    <a href="./index.html" class="nav-back">← HOME</a>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <span class="page-eyebrow">SOTTO — NEWS & ACTIVITIES</span>
+    <h1 class="page-title">NEWS</h1>
+    <p class="page-lead">
+      株式会社SOTTOのお知らせ・イベント・登壇・出展・メディア掲載・受賞などの活動一覧です。
+      これまでの歩みを新しい順でご覧いただけます。
+    </p>
+  </header>
+
+  <!-- ARCHIVE -->
+  <main class="archive">
+    <ul class="news-list" id="newsList">
+
+      <!-- 2026.10.07 登壇 -->
+      <li class="news-item">
+        <span class="news-date">2026.10.07</span>
+        <span class="news-tag">登壇</span>
+        <p class="news-title">GIRAFFES JAPAN STAGE「FUTURE LOUNGE」に登壇（福岡・天神／会場＋オンライン配信）</p>
+        <a class="news-link" href="https://giraffes.go.jp/life-goes-on/giraffes-japan-stage.html" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.10.07 出展 -->
+      <li class="news-item">
+        <span class="news-date">2026.10.07</span>
+        <span class="news-tag">出展</span>
+        <p class="news-title">「Life goes on. 女性起業家おしごと展 / WOMEN TECH EXPO」に出展（福岡・天神）</p>
+        <a class="news-link" href="https://goodelements.jp/life-goes-on/" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.09.11 メディア -->
+      <li class="news-item">
+        <span class="news-date">2026.09.11</span>
+        <span class="news-tag">メディア</span>
+        <p class="news-title">神戸新聞 朝刊17面「わがまち神戸」に掲載「女性専用の貸しオフィス」</p>
+        <a class="news-link" href="./media/kobe-shimbun-20260911.html">記事を読む →</a>
+      </li>
+
+      <!-- 2026.09.06 レポート -->
+      <li class="news-item">
+        <span class="news-date">2026.09.06</span>
+        <span class="news-tag">レポート</span>
+        <p class="news-title">【満席】SOTTO主催「空き家活用フェス」を開催しました〜5人の実践者が語る、空き家の新しい可能性〜</p>
+        <a class="news-link" href="https://note.com/sotto_design/n/n866531c09bc4" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.09.04 主催 -->
+      <li class="news-item">
+        <span class="news-date">2026.09.04</span>
+        <span class="news-tag">主催</span>
+        <p class="news-title">SOTTO主催「空き家活用フェス」開催（グラングリーン大阪 JAM BASE）</p>
+        <a class="news-link" href="https://peatix.com/event/5102967" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.09.03 出展 -->
+      <li class="news-item">
+        <span class="news-date">2026.09.03</span>
+        <span class="news-tag">出展</span>
+        <p class="news-title">「カケルDAY ひょうご地域創生フェス2026」（KIITO 神戸）に出展しました</p>
+        <a class="news-link" href="https://hyogo-chiikisousei-collab.jp/kakeruday2026/" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.08.28 レポート -->
+      <li class="news-item">
+        <span class="news-date">2026.08.28</span>
+        <span class="news-tag">レポート</span>
+        <p class="news-title">地域交流型アトリエ「すずらんテラス SOTTO」オープニングイベントを開催しました</p>
+        <a class="news-link" href="https://note.com/sotto_design/n/nae95e0489df5" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.08.22 内覧会 -->
+      <li class="news-item">
+        <span class="news-date">2026.08.22</span>
+        <span class="news-tag">内覧会</span>
+        <p class="news-title">地域交流型アトリエ「すずらんテラスSOTTO」の内覧会を開催しました</p>
+      </li>
+
+      <!-- 2026.08.13 登壇 -->
+      <li class="news-item">
+        <span class="news-date">2026.08.13</span>
+        <span class="news-tag">登壇</span>
+        <p class="news-title">住みながら育てる家“Tsumuie”が挑む、新しい暮らしの仕組み ナレッジ木曜サロン（グランフロント大阪）に登壇</p>
+        <a class="news-link" href="https://kc-i.jp/activity/salon-event/" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.08.10 プレスリリース -->
+      <li class="news-item">
+        <span class="news-date">2026.08.10</span>
+        <span class="news-tag">プレスリリース</span>
+        <p class="news-title">登壇者5名の実例から学ぶ「空き家活用のリアル」。SOTTO主催「空き家活用フェス」9/4 グラングリーン大阪 JAMBASEで開催</p>
+        <a class="news-link" href="https://prtimes.jp/main/html/rd/p/000000005.000180328.html" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.07.28 プレスリリース -->
+      <li class="news-item">
+        <span class="news-date">2026.07.28</span>
+        <span class="news-tag">プレスリリース</span>
+        <p class="news-title">神戸・鈴蘭台の元喫茶店空き家を地域交流型シェアアトリエへ。「すずらんテラス SOTTO」8/22グランドオープン</p>
+        <a class="news-link" href="https://prtimes.jp/main/html/rd/p/000000004.000180328.html" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.07.27 登壇 -->
+      <li class="news-item">
+        <span class="news-date">2026.07.27</span>
+        <span class="news-tag">登壇</span>
+        <p class="news-title">TeaTime勉強会 vol.17「間取り×キッチンで暮らしを設計する」に登壇</p>
+        <a class="news-link" href="https://anchorkobe.com/information/detail.php?id=38315" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.07.09 登壇 -->
+      <li class="news-item">
+        <span class="news-date">2026.07.09</span>
+        <span class="news-tag">登壇</span>
+        <p class="news-title">女性起業家応援イベント「DISCOVER MYSELF」に登壇</p>
+        <a class="news-link" href="https://discovermyself.jp/event/2539" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.05.22 レポート -->
+      <li class="news-item">
+        <span class="news-date">2026.05.22</span>
+        <span class="news-tag">レポート</span>
+        <p class="news-title">すずらんテラス リフォームスタート</p>
+        <a class="news-link" href="https://note.com/sotto_design/n/n15acd7f26ad0" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.04.25 レポート -->
+      <li class="news-item">
+        <span class="news-date">2026.04.25</span>
+        <span class="news-tag">レポート</span>
+        <p class="news-title">THE HOSPITEL 旅館リフォーム完了</p>
+        <a class="news-link" href="https://note.com/sotto_design/n/n0a8a69e3b222" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2026.03.05 レポート -->
+      <li class="news-item">
+        <span class="news-date">2026.03.05</span>
+        <span class="news-tag">レポート</span>
+        <p class="news-title">LED関西2025 登壇ダイジェスト YouTube動画公開</p>
+        <a class="news-link" href="https://discovermyself.jp/event/2557" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2025.12.26 受賞 -->
+      <li class="news-item">
+        <span class="news-date">2025.12.26</span>
+        <span class="news-tag">受賞</span>
+        <p class="news-title">LED関西 ファイナリストに選出</p>
+        <a class="news-link" href="https://discovermyself.jp/event/2492" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+      <!-- 2025.11.12 受賞 -->
+      <li class="news-item">
+        <span class="news-date">2025.11.12</span>
+        <span class="news-tag">受賞</span>
+        <p class="news-title">LED関西 セミファイナリストに選出</p>
+        <a class="news-link" href="https://discovermyself.jp/event/2450" target="_blank" rel="noopener">詳細を見る →</a>
+      </li>
+
+    </ul>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <img src="./images/logo/IMG_6491.PNG" alt="SOTTO" class="foot-logo">
+    <span class="foot-company">株式会社SOTTO</span>
+    <span class="foot-tag">空家活用プロデュース</span>
+    <nav class="foot-menu">
+      <a href="./index.html">HOME</a>
+      <a href="./index.html#works">WORKS</a>
+      <a href="./index.html#design">DESIGN</a>
+      <a href="./index.html#service">SERVICE</a>
+      <a href="./index.html#story">STORY</a>
+      <a href="https://note.com/sotto_design" target="_blank" rel="noopener">NOTE</a>
+    </nav>
+    <span class="foot-copy">© 2025 SOTTO Co., Ltd.</span>
+  </footer>
+
+</body>
+</html>

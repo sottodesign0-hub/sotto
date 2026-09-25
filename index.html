@@ -2292,6 +2292,22 @@
       transition: color .2s, border-color .2s;
     }
     .news-link:hover { color: var(--ink); border-color: var(--ink); }
+    .news-viewall {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .news-viewall-link {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: .28em;
+      color: var(--mid);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      padding: 14px 40px;
+      transition: color .2s, border-color .2s, background .2s;
+    }
+    .news-viewall-link:hover { color: var(--ink); border-color: var(--ink); background: var(--off); }
     @media (max-width: 768px) {
       .news-inner { padding: 0 24px; }
       .news-header { flex-direction: column; align-items: flex-start; gap: 20px; }
@@ -2720,6 +2736,7 @@
           <span class="concept-label">INFORMATION</span>
         </div>
       </div>
+      <a href="./news.html" class="event-more-link reveal d1">VIEW ALL →</a>
     </div>
 
     <ul class="news-list reveal d1">
@@ -2739,59 +2756,10 @@
       </li>
 
       <li class="news-item">
-        <span class="news-date">2026.08.22</span>
-        <span class="news-tag">内覧会</span>
-        <p class="news-title">地域交流型アトリエ「すずらんテラスSOTTO」の内覧会を開催しました</p>
-        <a href="https://www.instagram.com/suzuran_sotto" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
-      </li>
-
-      <li class="news-item">
         <span class="news-date">2026.08.28</span>
         <span class="news-tag">レポート</span>
         <p class="news-title">地域交流型アトリエ「すずらんテラス SOTTO」オープニングイベントを開催しました</p>
         <a href="https://note.com/sotto_design/n/nae95e0489df5" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
-      </li>
-
-      <li class="news-item">
-        <span class="news-date">2026.08.13</span>
-        <span class="news-tag">登壇</span>
-        <p class="news-title">住みながら育てる家“Tsumuie”が挑む、新しい暮らしの仕組み ナレッジ木曜サロン（グランフロント大阪 ナレッジキャピタル）に登壇</p>
-        <a href="https://kc-i.jp/activity/salon-event/" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
-      </li>
-
-      <li class="news-item">
-        <span class="news-date">2026.08.10</span>
-        <span class="news-tag">プレスリリース</span>
-        <p class="news-title">登壇者5名の実例から学ぶ「空き家活用のリアル」。SOTTO主催「空き家活用フェス」2026年9月4日グラングリーン大阪 JAMBASEで開催</p>
-        <a href="https://prtimes.jp/main/html/rd/p/000000005.000180328.html" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
-      </li>
-
-      <li class="news-item">
-        <span class="news-date">2026.07.28</span>
-        <span class="news-tag">プレスリリース</span>
-        <p class="news-title">神戸・鈴蘭台の元喫茶店空き家を地域交流型シェアアトリエへ。「すずらんテラス SOTTO」2026年8月22日グランドオープン</p>
-        <a href="https://prtimes.jp/main/html/rd/p/000000004.000180328.html" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
-      </li>
-
-      <li class="news-item">
-        <span class="news-date">2026.07.27</span>
-        <span class="news-tag">登壇</span>
-        <p class="news-title">TeaTime勉強会 vol.17「間取り×キッチンで暮らしを設計する」に登壇</p>
-        <a href="https://anchorkobe.com/information/detail.php?id=38315" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
-      </li>
-
-      <li class="news-item">
-        <span class="news-date">2026.07.09</span>
-        <span class="news-tag">登壇</span>
-        <p class="news-title">女性起業家応援イベント「DISCOVER MYSELF」登壇</p>
-        <a href="https://discovermyself.jp/event/2539" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
-      </li>
-
-      <li class="news-item">
-        <span class="news-date">2026.05.22</span>
-        <span class="news-tag">レポート</span>
-        <p class="news-title">すずらんテラスリフォームスタート</p>
-        <a href="https://note.com/sotto_design/n/n15acd7f26ad0" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
       </li>
 
       <li class="news-item">
@@ -2802,27 +2770,17 @@
       </li>
 
       <li class="news-item">
-        <span class="news-date">2026.03.05</span>
-        <span class="news-tag">レポート</span>
-        <p class="news-title">LED関西2025 登壇ダイジェストYouTube動画公開</p>
-        <a href="https://discovermyself.jp/event/2557" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
-      </li>
-
-      <li class="news-item">
         <span class="news-date">2025.12.26</span>
         <span class="news-tag">受賞</span>
         <p class="news-title">LED関西 ファイナリストに選出</p>
         <a href="https://discovermyself.jp/event/2492" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
       </li>
 
-      <li class="news-item">
-        <span class="news-date">2025.11.12</span>
-        <span class="news-tag">受賞</span>
-        <p class="news-title">LED関西 セミファイナリストに選出</p>
-        <a href="https://discovermyself.jp/event/2450" target="_blank" rel="noopener" class="news-link">詳細を見る →</a>
-      </li>
-
     </ul>
+
+    <div class="news-viewall reveal d2">
+      <a href="./news.html" class="news-viewall-link">これまでの活動をすべて見る →</a>
+    </div>
   </div>
 </section>
 
