@@ -2354,7 +2354,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 32px;
-      align-items: start;
+      align-items: stretch;
     }
     .media-feature {
       display: flex;
@@ -2409,8 +2409,13 @@
       color: var(--soft);
       margin-bottom: 22px;
     }
+    .media-feature-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+    }
     .media-more {
-      display: inline-block;
+      align-self: flex-start;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 9px;
       letter-spacing: .3em;
@@ -2421,7 +2426,7 @@
     }
     .media-feature:hover .media-more { color: var(--ink); border-color: var(--ink); }
     .media-note {
-      margin-top: 28px;
+      margin-top: auto;
       padding-top: 18px;
       border-top: 1px solid var(--line);
       font-size: 10.5px;
