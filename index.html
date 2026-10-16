@@ -2350,23 +2350,27 @@
       padding: 0 64px;
     }
     .media-inner .concept-index { margin-bottom: 48px; }
-    .media-feature {
+    .media-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.95fr) 1fr;
-      gap: 44px;
-      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .media-feature {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
       text-decoration: none;
       color: inherit;
       background: var(--white);
       border: 1px solid var(--line);
-      padding: 32px;
+      padding: 26px;
       transition: box-shadow .3s ease, transform .3s ease;
     }
     .media-feature:hover {
       box-shadow: 0 18px 44px rgba(26, 23, 16, .10);
       transform: translateY(-3px);
     }
-    .media-feature + .media-feature { margin-top: 32px; }
     .media-feature-img {
       overflow: hidden;
       background: var(--off);
@@ -2380,32 +2384,30 @@
     }
     .media-feature:hover .media-feature-img img { transform: scale(1.02); }
     .media-source {
-      grid-column: 1 / -1;
       font-family: 'Shippori Mincho', serif;
       font-weight: 600;
-      font-size: clamp(16px, 1.8vw, 21px);
-      letter-spacing: .05em;
+      font-size: clamp(13px, 1.3vw, 15.5px);
+      letter-spacing: .04em;
       line-height: 1.6;
       color: var(--ink);
-      margin-bottom: 4px;
-      padding-bottom: 20px;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--line);
     }
     .media-headline {
       font-family: 'Shippori Mincho', serif;
       font-weight: 500;
-      font-size: clamp(15px, 1.7vw, 19px);
+      font-size: clamp(14px, 1.4vw, 17px);
       letter-spacing: .04em;
       line-height: 1.5;
       color: var(--mid);
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
     .media-subhead {
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 400;
-      line-height: 1.9;
+      line-height: 1.85;
       color: var(--soft);
-      margin-bottom: 26px;
+      margin-bottom: 22px;
     }
     .media-more {
       display: inline-block;
@@ -2430,7 +2432,8 @@
     }
     @media (max-width: 768px) {
       .media-inner { padding: 0 24px; }
-      .media-feature { grid-template-columns: 1fr; gap: 24px; padding: 20px; }
+      .media-grid { grid-template-columns: 1fr; gap: 24px; }
+      .media-feature { padding: 20px; }
     }
   </style>
 </head>
@@ -2710,6 +2713,7 @@
       <span class="concept-label">掲載メディア</span>
     </div>
 
+    <div class="media-grid">
     <a class="media-feature reveal d1" href="./media/zenchin-20260928.html">
       <div class="media-source">全国賃貸住宅新聞　2026.09.28　No.1718　17面 掲載</div>
       <div class="media-feature-img">
@@ -2737,6 +2741,7 @@
         <p class="media-note">本記事は、神戸新聞社の許諾（著作物利用許諾書）を得て転載しています。無断での複製・転載・二次利用はご遠慮ください。<br>掲載媒体：神戸新聞　2026年9月11日　朝刊17面「わがまち神戸」</p>
       </div>
     </a>
+    </div>
   </div>
 </section>
 
