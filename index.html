@@ -2177,6 +2177,11 @@
       transition: border-color .2s;
     }
     .event-card-link:hover { border-color: var(--ink); }
+    .event-card-link-disabled {
+      color: var(--muted, #999);
+      border-bottom-color: transparent;
+      cursor: default;
+    }
     .event-card-link svg {
       width: 14px; height: 14px;
       stroke: currentColor; fill: none;
@@ -2625,7 +2630,7 @@
         <p class="work-desc">
           空き家をリノベーションし、地域に開かれた<br>
           複合的な場へと再生。<br>
-          2026年夏、神戸市北区鈴蘭台オープン予定。
+          2026年8月、神戸市北区鈴蘭台にオープン。
         </p>
         <p class="work-meta">神戸市北区鈴蘭台東町２丁目６−１４</p>
         <a href="https://sottodesign0-hub.github.io/suzuranteracce/" target="_blank" rel="noopener" class="work-link">VIEW</a>
@@ -2675,29 +2680,6 @@
         </div>
       </div>
 
-      <!-- イベントカード：Life goes on. 女性起業家おしごと展 出展 -->
-      <div class="event-card">
-        <div class="event-card-img-wrap" style="aspect-ratio:2/1;">
-          <img src="./images/event/1007出展.png" alt="Life goes on. 女性起業家おしごと展 WOMEN TECH EXPO" class="event-card-img">
-        </div>
-        <div class="event-card-content">
-          <div class="event-card-meta">
-            <span class="event-date">2026.10.07</span>
-            <span class="event-tag">出展</span>
-          </div>
-          <p class="event-card-title">Life goes on.<br>女性起業家おしごと展</p>
-          <p class="event-card-desc">
-            10:00〜20:00<br>
-            ONE FUKUOKA CONFERENCE HALL<br>（福岡・天神）<br>
-            WOMEN TECH EXPO（RAMEN TECH 2026 公式リンクイベント）に出展
-          </p>
-          <a href="https://goodelements.jp/life-goes-on/" target="_blank" rel="noopener" class="event-card-link">
-            詳細を見る
-            <svg viewBox="0 0 16 16"><line x1="2" y1="8" x2="13" y2="8"/><polyline points="9,4 13,8 9,12"/></svg>
-          </a>
-        </div>
-      </div>
-
       <!-- イベントカード：NATTER COFFEE 喫茶＋ROOM完成お披露目会 -->
       <div class="event-card">
         <div class="event-card-img-wrap" style="aspect-ratio:2/1;">
@@ -2718,6 +2700,26 @@
             詳細・お申し込み
             <svg viewBox="0 0 16 16"><line x1="2" y1="8" x2="13" y2="8"/><polyline points="9,4 13,8 9,12"/></svg>
           </a>
+        </div>
+      </div>
+
+      <!-- イベントカード：台湾ランタン祭 すずらんテラスSOTTO -->
+      <div class="event-card">
+        <div class="event-card-img-wrap" style="aspect-ratio:2/1;">
+          <img src="./images/event/1212.png" alt="台湾ランタン祭 台湾料理とランタン作りWS 12月12日（土）すずらんテラスSOTTO" class="event-card-img">
+        </div>
+        <div class="event-card-content">
+          <div class="event-card-meta">
+            <span class="event-date">2026.12.12</span>
+            <span class="event-tag">主催</span>
+          </div>
+          <p class="event-card-title">すずらんテラスSOTTO<br>台湾ランタン祭</p>
+          <p class="event-card-desc">
+            10:00〜16:00<br>
+            すずらんテラスSOTTO<br>（神戸市北区鈴蘭台東町2-6-14）<br>
+            台湾料理と、火を使わないLEDランタン作りワークショップを楽しめる親子参加型イベント。完成したランタンを並べて一斉点灯します。
+          </p>
+          <span class="event-card-link event-card-link-disabled">お申し込み準備中</span>
         </div>
       </div>
 
